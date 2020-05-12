@@ -120,6 +120,9 @@ namespace PagerDuty.Events
             private IDictionary<string, object> additionalData = null;
         }
 
+        /// <summary>
+        /// The payload of the trigger event
+        /// </summary>
         [JsonProperty(PropertyName = "payload")]
         public EventPayload Payload { get; set; }
 
