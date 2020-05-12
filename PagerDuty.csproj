@@ -12,12 +12,13 @@
     <AssemblyName>PagerDutyClient</AssemblyName>
     <Authors>Elnatan Novaes Torres</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <RepositoryUrl>https://github.com/pagerduty-csharp</RepositoryUrl>
+    <RepositoryUrl>https://github.com/elnatantorres/pagerduty-client</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageDescription>A library that allows you to easily use PagerDuty's Events API V2.</PackageDescription>
     <PackageTags>PagerDuty;Incident;Microsoft;.NET Core</PackageTags>
     <PackageProjectUrl>https://github.com/elnatantorres/pagerduty-client</PackageProjectUrl>
     <PackageReleaseNotes>The first release contains features that allows the trigger of events at PagerDuty's Events API V2.</PackageReleaseNotes>
+    <PackageId>PagerDutyClient</PackageId>
   </PropertyGroup>
   
   <ItemGroup>
