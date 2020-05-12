@@ -30,7 +30,7 @@ namespace PagerDuty.Events
         /// <summary>
         /// Cached routing key.
         /// </summary>
-        private static readonly Lazy<string> cachedRoutingKey = new Lazy<string>(() => Environment.GetEnvironmentVariable("RoutingKey")?.Trim(), LazyThreadSafetyMode.PublicationOnly);
+        private static readonly Lazy<string> cachedRoutingKey = new Lazy<string>(() => Environment.GetEnvironmentVariable("ROUTING_KEY")?.Trim(), LazyThreadSafetyMode.PublicationOnly);
     }
 }
     
