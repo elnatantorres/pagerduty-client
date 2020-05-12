@@ -14,8 +14,10 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/pagerduty-csharp</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageDescription>C# library to use PagerDuty's API V2 with .NET Standard 2.0 and .NET Core support.</PackageDescription>
+    <PackageDescription>A library that allows you to easily use PagerDuty's Events API V2.</PackageDescription>
     <PackageTags>PagerDuty;Incident;Microsoft;.NET Core</PackageTags>
+    <PackageProjectUrl>https://github.com/elnatantorres/pagerduty-client</PackageProjectUrl>
+    <PackageReleaseNotes>The first release contains features that allows the trigger of events at PagerDuty's Events API V2.</PackageReleaseNotes>
   </PropertyGroup>
   
   <ItemGroup>
