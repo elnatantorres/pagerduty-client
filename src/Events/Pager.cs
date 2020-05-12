@@ -13,6 +13,50 @@ namespace PagerDuty.Events
     {
         private const string endpoint = "https://events.pagerduty.com/v2/enqueue";
 
+
+        /// <summary>
+        /// Triggers an event with severity Error. 
+        /// </summary>
+        /// <param name="summary">A high-level, text summary message of the event. Will be used to construct an alert's description.</param>
+        /// <param name="component">The part or component of the affected system that is broken.</param>
+        /// <param name="dedupKey">Deduplication key for correlating triggers and resolves. If the event must be added to an existing alert,
+        /// the provided dedup key must be equal to all the other events of the alert. If it is a new alert, the dedup key must be null.</param>
+        /// <returns>The event response.</returns>
+        public static EventResponse Trigger(string summary, string component, Guid? dedupKey = null)
+        {
+            return TriggerEvent.New().Trigger(summary, component, dedupKey);
+        }
+
+        /// <summary>
+        /// Triggers an event with a given severity.
+        /// </summary>
+        /// <param name="summary">A high-level, text summary message of the event. Will be used to construct an alert's description.</param>
+        /// <param name="component">The part or component of the affected system that is broken.</param>
+        /// <param name="eventSeverity">How impacted the affected system is. Displayed to users in lists and influences the priority of any created incidents.</param>
+        /// <param name="dedupKey">Deduplication key for correlating triggers and resolves. If the event must be added to an existing alert,
+        /// the provided dedup key must be equal to all the other events of the alert. If it is a new alert, the dedup key must be null.</param>
+        /// <returns>The event response.</returns>
+        public static EventResponse Trigger(string summary, string component, EventSeverity eventSeverity, Guid? dedupKey = null)
+        {
+            return TriggerEvent.New().Trigger(summary, component, eventSeverity, dedupKey);
+        }
+
+        /// <summary>
+        /// Triggers an event with a given severity and more details about the occurrence.
+        /// </summary>
+        /// <param name="summary">A high-level, text summary message of the event. Will be used to construct an alert's description.</param>
+        /// <param name="component">The part or component of the affected system that is broken.</param>
+        /// <param name="eventSeverity">How impacted the affected system is. Displayed to users in lists and influences the priority of any created incidents.</param>
+        /// <param name="group">A cluster or grouping of sources.</param>
+        /// <param name="eventClass">The class/type of the event.</param>
+        /// <param name="dedupKey">Deduplication key for correlating triggers and resolves. If the event must be added to an existing alert,
+        /// the provided dedup key must be equal to all the other events of the alert. If it is a new alert, the dedup key must be null.</param>
+        /// <returns>The event response.</returns>
+        public static EventResponse Trigger(string summary, string component, EventSeverity eventSeverity, string group, string eventClass, Guid? dedupKey = null)
+        {
+            return TriggerEvent.New().Trigger(summary, component, eventSeverity, group, eventClass, dedupKey);
+        }
+
         /// <summary>
         /// Enqueues an event.
         /// </summary>
