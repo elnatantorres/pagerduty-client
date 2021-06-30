@@ -1,4 +1,6 @@
-﻿namespace PagerDuty.Events.ContextProperties
+using Newtonsoft.Json;
+
+namespace PagerDuty.Events.ContextProperties
 {
     /// <summary>
     /// This property is used to attach text links to the incident.
@@ -8,6 +10,7 @@
         /// <summary>
         /// URL of the link to be attached.
         /// </summary>
+        [PropertyName("href")]
         public string HypertextReference { get; set; }
 
         /// <summary>
